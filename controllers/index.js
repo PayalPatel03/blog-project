@@ -1,6 +1,7 @@
 const User = require("../models/user.model");
 const bcrypt = require("bcrypt");
 
+
 module.exports.homePage = (req, res) => {
   res.render("pages/index");
 };
@@ -35,7 +36,7 @@ module.exports.login=async(req,res)=>{
         let {email,password}=req.body;
         let user=await User.findOne({email});
         if(user){
-            let isValid=bcrypt.compare(password,user.password);
+            let isValid=await bcrypt.compare(password,user.password);
             if(isValid){
                 console.log("login success");
                 res.cookie('userId',user.id);
@@ -50,7 +51,5 @@ module.exports.login=async(req,res)=>{
         }
     } catch (error) {
         console.log(error.message);
-        
-        
     }
 }
