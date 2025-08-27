@@ -31,6 +31,7 @@ module.exports.signup = async (req, res) => {
     res.redirect(req.get('Referrer' || '/'));
   }
 };
+
 module.exports.login=async(req,res)=>{
     try {
         let {email,password}=req.body;
