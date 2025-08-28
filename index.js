@@ -7,7 +7,7 @@ const redirectMiddleware = require("./middleware/redirectMiddleware");
 
 const cookieParser = require('cookie-parser');
 
-const port = 8089;
+const port = 8081;
 const app = express();
 
 app.set("view engine", "ejs");
