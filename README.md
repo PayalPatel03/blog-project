@@ -69,6 +69,9 @@ blog-project/
 │── package.json
 │── package-lock.json
 ```
+## screenshot
+<img width="1882" height="861" alt="image" src="https://github.com/user-attachments/assets/2e244524-8441-4630-a017-ed75a13c98d0" />
+
 
 
 
